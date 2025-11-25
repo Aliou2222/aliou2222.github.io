@@ -9,19 +9,18 @@ body {
 h1 {
     background-color: #9a96a0;
     color: #F9ECCC;
-    border-left: 10px solid #ce3d15;
+    border-left: 35px solid #ce3d15;
     text-align: center;
-    font-size: 24px;
+    font-size: 35px;
 }
 
 img {
-    width: 35%;
-    height: 35%;
+    width: 45%;
+    height: 45%;
     border: 3px solid #000000;
-    align-items: center;
     border-radius: 45px;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.5);
-    display: block;
+   
 }
 
 
