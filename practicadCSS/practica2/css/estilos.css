@@ -28,11 +28,16 @@ img {
 }
 
 ul {
-
+  list-style-type: none;
+  margin: 30px 0;
+  text-align: center;
 }
 
 li {
-
+  display: inline;
+  margin: 80px 0;
+ border-left: 6px solid red
+ 
 }
 
 p {
@@ -42,7 +47,8 @@ p {
   margin-bottom: 3px;
   margin-right: 3px;
   margin-left: 3px;
-  
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
   
 }
 
@@ -59,8 +65,8 @@ p {
 }
 
 #text p {
-  text-align: right;
-  
+  text-align: justify;
+  text-indent: 50px;
   
 }
 
