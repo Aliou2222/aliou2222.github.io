@@ -18,12 +18,12 @@ body {
     
 }
 
-.container {
+article {
     text-align: center;
     
 }
 
-.youtuber, .footer, .header {
+.youtuber, footer, header {
     border: 1px solid lightgray;
     /* 5- redondear el borde */
     /* 6- sombra */
@@ -36,7 +36,7 @@ body {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
      
 }
-.footer {
+footer {
     padding: 0px;
     color: white;
     
@@ -78,7 +78,7 @@ body {
     font-size: 1em;
 }
 
-#menu {
+nav {
     text-decoration: none;
 }
 
@@ -89,12 +89,12 @@ li {
      display: inline;
 }
 
-#menu a {
+nav a {
     text-decoration: none;
     color: white;
 }
 
-#menu a:hover {
+nav a:hover {
     color: red;
 
 }
@@ -114,6 +114,7 @@ li {
 }
 .button:hover {
     color: black;
+     background-color: #fd8700;
 }
 
 @media all and (max-width: 700px) {
