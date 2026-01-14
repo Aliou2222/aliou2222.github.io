@@ -160,10 +160,10 @@ p {
  */
 
   /* necesitas 4 instrucciones. 3 son distancia a los bordes :)*/
-  /*1: */  position: absolute;
-  /*2: */  left: 50%;  
-  /*3: */  top: 40%;  
-  /*4: */  transform: translate(-50%, -50%);  
+  /*1: */  position: fixed;
+  /*2: */  width: 60%; 
+  /*3: */  
+  /*4: */  
   border:2px solid red;
   background-color: white;
   margin-bottom: 5px;
@@ -218,7 +218,7 @@ p {
     Punto 7.1: Barra de menu siempre estara 
     */
     /* necesitas 1 instruccion*/
-    /*1: */
+    /*1: */float: none;
     text-align: center;
     padding-bottom: 5px;
   }
@@ -228,10 +228,10 @@ p {
     Punto 7.1: Barra de menu siempre estara 
     */
     /* necesitas 1 instruccion*/
-    /*1: */
+    /*1: */float: none;
     text-align: center;
     clear: both;
-  padding-bottom: 5px;
+    padding-bottom: 5px;
   }
   
   #textCentral {
@@ -243,7 +243,7 @@ p {
     Punto 7.2: Barra de menu siempre estara 
     */
     /* necesitas 1 instruccion*/
-    /*1: */
+    /*1: */float: none;
 
     text-align: center;
     margin-bottom: 40px;
@@ -263,7 +263,7 @@ p {
   #header {
     /*
     Cambio el margen para que no lo tape el menu
-    */
+    */position: fixed;
     margin-top: 100px;
   }
 }
