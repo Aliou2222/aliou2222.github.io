@@ -3,12 +3,13 @@
 }
 
 body {
-  background: url('../images/fondo.jpg');
-  background-repeat: no-repeat;
+  background: url('../images/hytale.jpeg');
+  background-repeat:no-repeat;
   background-position: center center;
-  background-size: cover;
+  background-size:cover;
   font-family: 'Indie Flower', cursive;
 }
+
 
 h1, h2 {
   text-align: center;
@@ -21,6 +22,7 @@ img {
 
 ul {
   color: white;
+  list-style-type: none;
 }
 
 p {
@@ -74,6 +76,21 @@ p {
   /* necesitas 2 instrucciones*/
   /*1: */text-decoration: underline blue;
   /*2: */background-color: orange;
+}
+
+#menulateral {
+  /*
+  Punto 1: Barra de menu siempre estara 
+  */
+  /* necesitas 3 instrucciones*/
+  /*1: */position: fixed;
+  /*2: */top: 0;
+  /*3: */width: 10%;
+  text-align: center;  
+  background-color: #097054;
+  border: 1px solid #FF9900;
+  font-family: 'Pacifico', cursive;
+  font-size: 1.2em;
 }
 
 #footer{
