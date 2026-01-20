@@ -31,12 +31,18 @@ p {
 
 #header {
   margin-top: 35px;
-  text-align: center;
-  background-color: #FF9900;
+  opacity: 80%;
   border-bottom: 5px solid #6599FF;
   border-top: 5px solid #6599FF;
-  color: white;
+  color: rgb(51, 126, 212);
   padding-top: 10px;
+  height: 300px;
+  background: url('../images/hytale.jpeg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  
 }
 
 #content{
@@ -52,14 +58,14 @@ p {
   /*2: */top: 0;
   /*3: */width: 100%;
   text-align: center;  
-  background-color: #097054;
+  background-color: #6eb64d;
   border: 1px solid #FF9900;
   font-family: 'Pacifico', cursive;
   font-size: 1.2em;
 }
 
 #menu a{
-  color: white;
+  color: rgb(9, 115, 156);
   text-decoration: none;
 }
 
@@ -74,8 +80,8 @@ p {
   Punto 1: Los enlaces cambian de color de fondo y estan subrayados de color azul
   */
   /* necesitas 2 instrucciones*/
-  /*1: */text-decoration: underline blue;
-  /*2: */background-color: orange;
+  /*1: */text-decoration: underline rgb(255, 255, 255);
+  /*2: */background-color: rgb(0, 0, 0);
 }
 
 #menulateral {
@@ -83,14 +89,17 @@ p {
   Punto 1: Barra de menu siempre estara 
   */
   /* necesitas 3 instrucciones*/
-  /*1: */position: fixed;
-  /*2: */top: 0;
-  /*3: */width: 10%;
+  /*1: */
+  /*2: */
+  position: fixed;
+right: 0;
+top: 400px;
   text-align: center;  
   background-color: #097054;
   border: 1px solid #FF9900;
   font-family: 'Pacifico', cursive;
-  font-size: 1.2em;
+ 
+  
 }
 
 #footer{
@@ -124,27 +133,8 @@ p {
   margin-right: 60px;
 }
 
-
-#imageLeft {
- /*
-  Punto 2: La capa de las imagenes debe aparecer a la izquierda de la pantalla
- */
-
-  /* necesitas 1 instruccion*/
-  /*1: */float: left;
-  text-align: center;
-  padding-bottom: 5px;
-}
-
-#imageRight {
- /*
-  Punto 2: La capa de las imagenes debe aparecer a la derecha de la pantalla
- */
-
-  /* necesitas 1 instruccion*/
-  /*1: */float: right;
-  text-align: center;
-  padding-bottom: 5px;
+.corredor {
+  
 }
 
 #textMain {
@@ -154,6 +144,13 @@ p {
 
   /* necesitas 1 instruccion*/
   /*1: */clear: left;
+         margin-right: 300px;
+}
+
+#textMain2 {
+
+  clear: right;
+  margin-right: 300px;
 }
 
 #imageToHide {
@@ -165,6 +162,16 @@ p {
   /*1: */  float: left;
   text-align: center;
   margin-bottom: 40px;
+  margin-top: 40px;
+  margin-right: 70px;
+}
+
+#imageToHide2 {
+float: right;
+  text-align: center;
+  margin-bottom: 40px;
+  margin-top: 40px;
+  margin-right: 70px;
 }
 
 #textCookie {
@@ -211,13 +218,39 @@ p {
   border: 5px dashed black;
   background-color: white;
   margin: 10px 250px ;
-  border-radius: 30px 30px 30px 30px ;     /* resto */
+  border-radius: 30px 30px 30px 30px ;  
+}
+
+#textOverflow2 {
+ /*
+  Punto 5: La capa tiene una barra de scroll vertical para que podamos leer el texto que no cabe en el tamaño. Solo vertical, no horizontal
+ */
+
+  /* necesitas 2 instruccion*/
+  /*1: */  overflow-y: scroll;
+  /*2: */  bottom: 100;
+  
+  height: 250px;
+  text-align: justify;
+  border: 5px solid black;
+  background-color: white;
+  padding: 20px;
+  margin-right: 20px;
+}
+
+#textCentral {
+  margin-top: 10px;
+  padding: 15px;
+  border: 5px dashed black;
+  background-color: white;
+  margin: 10px 250px ;
+  border-radius: 30px 30px 30px 30px ;
 }
 
 .button {
-  	background-color: #097054; /* Green */
+  	background-color: #596461; /* Green */
     border: none;
-    color: white;
+    color: rgb(65, 217, 255);
     padding: 15px 32px;
     text-align: center;
     text-decoration: none;
@@ -230,25 +263,12 @@ p {
 }
 
 @media all and (max-width: 500px) {
-  #imageLeft {
-    /*
-    Punto 7.1: Barra de menu siempre estara 
-    */
-    /* necesitas 1 instruccion*/
-    /*1: */float: none;
-    text-align: center;
-    padding-bottom: 5px;
+  #menulateral {
+  float: none;
+  width: 100%;
   }
-
-  #imageRight {
-    /*
-    Punto 7.1: Barra de menu siempre estara 
-    */
-    /* necesitas 1 instruccion*/
-    /*1: */float: none;
-    text-align: center;
-    clear: both;
-    padding-bottom: 5px;
+  #menulateral li {
+  display: inline-block;
   }
   
   #textCentral {
@@ -265,8 +285,23 @@ p {
     text-align: center;
     margin-bottom: 40px;
   }
+
+  #imageToHide2 {
+    /*
+    Punto 7.2: Barra de menu siempre estara 
+    */
+    /* necesitas 1 instruccion*/
+    /*1: */float: none;
+
+    text-align: center;
+    margin-bottom: 40px;
+  }
   
   #textOverflow {
+    margin-right: 0px;
+  }
+
+  #textOverflow2 {
     margin-right: 0px;
   }
   
@@ -276,11 +311,3 @@ p {
  
 }
 
-@media all and (max-width: 300px) {
-  #header {
-    /*
-    Cambio el margen para que no lo tape el menu
-    */position: relative;
-    margin-top: 100px;
-  }
-}
