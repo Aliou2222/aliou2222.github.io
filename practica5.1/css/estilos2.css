@@ -231,10 +231,12 @@ border: dashed 5px black;
 }
 
 #footer a:hover{
+  text-decoration: underline rgb(0, 0, 0);
   text-decoration: none;
   color: black;
   background-color: rgb(0, 164, 240)
   
+
   
 
 }
@@ -250,19 +252,20 @@ border: dashed 5px black;
 
 @media all and (max-width: 500px) {
 
-  #unoImagen{
+  #imagen1{
     float: none;
   }
 
-  #dosImagen{
+  #imagen2{
     float: none;
   }
 
-  #derecha{
+  #menulateral{
     float: none;
+    display: inline;
   }
 
-  #derecha li{
+  #menulateral li{
     display: inline;
   }
 }
