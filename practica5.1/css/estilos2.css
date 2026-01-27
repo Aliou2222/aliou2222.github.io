@@ -7,10 +7,18 @@ body {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  font-family: 'Indie Flower', cursive;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-h1, h2 {
+h1 {
+  text-align: center;
+  margin-top: 100px;
+  font-size: 100px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(0, 164, 240);
+}
+
+H2{
   text-align: center;
 }
 
@@ -19,10 +27,11 @@ h1, h2 {
   position: fixed;
   top: 0;
   width: 100%;
-  height: 30px;
+  height: 38px;
   text-align: center;  
-  background-color: #097054;
-  border: 1px solid #FF9900;
+  background-color: rgb(3, 187, 65);
+  border: 1px solid  rgb(0, 164, 240);
+  font-size: 25px;
 }
 
 #menu li{
@@ -33,16 +42,18 @@ height: 20px;
 #menu a{
   color: white;
   text-decoration: none;
+  
 }
 
 #menu li a:hover{
-  text-decoration: underline blue;
-  background-color: orange;
+  text-decoration: underline rgb(3, 187, 65);
+  background-color: white;
+  color: black;
 }
 
 #header{
 margin-top: 10px;
-border: 2px solid rgb(246, 15, 15);
+border: 2px solid  rgb(0, 164, 240);
 text-align: center;
 color: white;
 height: 500px;
@@ -65,7 +76,7 @@ font-family: 'Indie Flower', cursive;
   width: 70%; 
   left: 15%;
   top: 35%;
-  border:2px solid red;
+  border:2px solid rgb(3, 187, 65);
   background-color: white;
   margin-bottom: 5px;
   padding-bottom: 5px;
@@ -81,15 +92,16 @@ font-family: 'Indie Flower', cursive;
 
 #izquierda{
   float: left;
-  width: 80%;
-  border: #443266 solid 15px;
+  width: 83%;
+  border-right: 36px double rgb(0, 243, 247);
+  border-top: 2px solid  rgb(0, 243, 247);
   text-align: center;
   
 }
 
 #menulateral{
   float: right;
-  width: 15%;
+  width: 10%;
   text-align: center;
   height: 835px;
   padding-top: 10px;
@@ -102,7 +114,7 @@ font-family: 'Indie Flower', cursive;
 }
 
 #prim {
-  border: #535353 10px solid;
+  
   text-align: center;
   height: 400px;
 }
@@ -111,49 +123,57 @@ font-family: 'Indie Flower', cursive;
 
 #primImagen{
   float: right;
-  border: #053196 10px solid;
+  
   text-align: center;
   height: 350px;
+  padding-top: 65px;
+  padding-right: 50px;
 }
 
 #primTexto{
   float: left;
   overflow-y: scroll;
-  width: 50%;
+  width: 70%;
   height: 300px;
   text-align: justify;
-  border: 5px solid rgb(149, 23, 23);
+  border-top: 5px solid rgb(0, 243, 247);
+  border-left: 5px solid  rgb(0, 243, 247);
   background-color: white;
   padding: 20px;
   margin-left: 10px;
   margin-right: 20px;
+  margin-top: 30px;
 }
 
 #dos {
-  border: #151515 10px solid;
+  border-top: rgb(0, 164, 240) 5px dashed;
   text-align: center;
   height: 400px;
 }
 
 #dosImagen{
   float: left;
-  border: #053196 10px solid;
+  
   text-align: center;
   height: 350px;
+  padding-top: 75px;
+  padding-left: 30px;
   
 }
 
 #dosTexto{
   float: right;
   overflow-y: scroll;
-  width: 50%;
+  width: 70%;
   height: 300px;
   text-align: justify;
-  border: 5px solid rgb(149, 23, 23);
+  border-bottom: 5px solid  rgb(0, 243, 247);
+  border-right: 5px solid  rgb(0, 243, 247);
   background-color: white;
   padding: 20px;
   margin-left: 10px;
   margin-right: 20px;
+  margin-top: 30px;
   
   
 }
@@ -164,13 +184,18 @@ img{
   margin: 10px;
 }
 
+.imagenes{
+  border: dashed 5px  rgb(0, 164, 240);
+  
+}
+
 img:hover{
-background-color: #097054;
+background-color: rgb(3, 187, 65);
 border: dashed 5px black;
 }
 
 .button {
-  	background-color: #097054; /* Green */
+  	background-color: rgb(3, 187, 65); 
     border: none;
     color: white;
     padding: 15px 32px;
@@ -182,16 +207,17 @@ border: dashed 5px black;
 
 .button:hover {
     box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    color: black;
 }
 
 #footer{
   bottom: 0;
   position: fixed;
   width: 100%;
-  background-color: #097054;
+  background-color: rgb(3, 187, 65);
   text-align: center;
   color: white;
-  border-top: 5px solid black;
+  border-top: 5px solid rgb(0, 164, 240);
   clear: both;
 }
 
@@ -201,17 +227,21 @@ border: dashed 5px black;
 }
 
 #footer a:hover{
-  color: #443266;
-  background-color: white;
   text-decoration: none;
+  color: black;
+  background-color: rgb(0, 164, 240)
+  
+  
+
 }
 
-#menulateral{
-border: 2px solid rgb(0, 243, 247);
+#menulateral {
   
+  border-top: 2px  solid rgb(0, 243, 247);
+  border-bottom: 2px  solid rgb(0, 243, 247);
+  border-right: 2px  solid rgb(0, 243, 247);
   font-family: 'Indie Flower', cursive;
   width: 15%;
-  
 }
 
 @media all and (max-width: 500px) {
