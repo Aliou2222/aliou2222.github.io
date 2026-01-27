@@ -3,114 +3,191 @@
 }
 
 body {
-  background: url('../images/hytale.jpeg');
-  background-repeat:no-repeat;
+  background: url('../images/hytale0.jpg');
+  background-repeat: no-repeat;
   background-position: center center;
-  background-size:cover;
+  background-size: cover;
   font-family: 'Indie Flower', cursive;
 }
-
 
 h1, h2 {
   text-align: center;
 }
 
-img {
+#menu{
+  text-align: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 30px;
+  text-align: center;  
+  background-color: #097054;
+  border: 1px solid #FF9900;
+}
+
+#menu li{
+display: inline;
+height: 20px;
+}
+
+#menu a{
+  color: white;
+  text-decoration: none;
+}
+
+#menu li a:hover{
+  text-decoration: underline blue;
+  background-color: orange;
+}
+
+#header{
+margin-top: 10px;
+border: 2px solid rgb(246, 15, 15);
+text-align: center;
+color: white;
+height: 500px;
+padding-top: 10px;
+background: url('../images/hytale.webp');
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-position: center center;
+background-size: cover;
+font-family: 'Indie Flower', cursive;
+
+}
+
+#textCookie {
+  text-align: center;
+}
+
+#cookieEU {
+  position:absolute;
+  width: 70%; 
+  left: 15%;
+  top: 35%;
+  border:2px solid red;
+  background-color: white;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+  box-shadow: 2px 2px 50px black;
+}
+
+#main{
+  
+  font-family: 'Indie Flower', cursive;
+  overflow: auto;
+  
+}
+
+#izquierda{
+  float: left;
+  width: 80%;
+  border: #443266 solid 15px;
+  text-align: center;
+  
+}
+
+#menulateral{
+  float: right;
+  width: 15%;
+  text-align: center;
+  height: 835px;
+  padding-top: 10px;
+}
+
+#menulateral li{
+  list-style: none;
+  height: 150px;
+  
+}
+
+#prim {
+  border: #535353 10px solid;
+  text-align: center;
+  height: 400px;
+}
+
+
+
+#primImagen{
+  float: right;
+  border: #053196 10px solid;
+  text-align: center;
+  height: 350px;
+}
+
+#primTexto{
+  float: left;
+  overflow-y: scroll;
+  width: 50%;
+  height: 300px;
+  text-align: justify;
+  border: 5px solid rgb(149, 23, 23);
+  background-color: white;
+  padding: 20px;
+  margin-left: 10px;
+  margin-right: 20px;
+}
+
+#dos {
+  border: #151515 10px solid;
+  text-align: center;
+  height: 400px;
+}
+
+#dosImagen{
+  float: left;
+  border: #053196 10px solid;
+  text-align: center;
+  height: 350px;
+  
+}
+
+#dosTexto{
+  float: right;
+  overflow-y: scroll;
+  width: 50%;
+  height: 300px;
+  text-align: justify;
+  border: 5px solid rgb(149, 23, 23);
+  background-color: white;
+  padding: 20px;
+  margin-left: 10px;
+  margin-right: 20px;
+  
+  
+}
+
+img{
+  border-radius: 15%;
   border: dashed 5px #FF9900;
   margin: 10px;
 }
 
-ul {
-  color: white;
-  list-style-type: none;
+img:hover{
+background-color: #097054;
+border: dashed 5px black;
 }
 
-p {
-  margin-bottom: 5px;
+.button {
+  	background-color: #097054; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
 }
 
-#header {
-  margin-top: 35px;
-  opacity: 80%;
-  border-bottom: 5px solid #6599FF;
-  border-top: 5px solid #6599FF;
-  color: rgb(51, 126, 212);
-  padding-top: 10px;
-  height: 300px;
-  background: url('../images/hytale.jpeg');
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  
-}
-
-#content{
-  
-}
-
-#menu {
-  /*
-  Punto 1: Barra de menu siempre estara 
-  */
-  /* necesitas 3 instrucciones*/
-  /*1: */position: fixed;
-  /*2: */top: 0;
-  /*3: */width: 100%;
-  text-align: center;  
-  background-color: #6eb64d;
-  border: 1px solid #FF9900;
-  font-family: 'Pacifico', cursive;
-  font-size: 1.2em;
-}
-
-#menu a{
-  color: rgb(9, 115, 156);
-  text-decoration: none;
-}
-
-
-#menu li{
-  display: inline;
-  padding-left: 5px;  
-}
-
-#menu li a:hover{
-  /*
-  Punto 1: Los enlaces cambian de color de fondo y estan subrayados de color azul
-  */
-  /* necesitas 2 instrucciones*/
-  /*1: */text-decoration: underline rgb(255, 255, 255);
-  /*2: */background-color: rgb(0, 0, 0);
-}
-
-#menulateral {
-  /*
-  Punto 1: Barra de menu siempre estara 
-  */
-  /* necesitas 3 instrucciones*/
-  /*1: */
-  /*2: */
-  position: fixed;
-right: 0;
-top: 400px;
-  text-align: center;  
-  background-color: #097054;
-  border: 1px solid #FF9900;
-  font-family: 'Pacifico', cursive;
- 
-  
+.button:hover {
+    box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 #footer{
-  /*
-  Punto 6: Barra de pie de pagina siempre estara 
-  */
-  /* necesitas 3 instrucciones*/
-  /*1: */bottom: 0;
-  /*2: */position: fixed;
-  /*3: */width: 100%;
-  
+  bottom: 0;
+  position: fixed;
+  width: 100%;
   background-color: #097054;
   text-align: center;
   color: white;
@@ -128,186 +205,31 @@ top: 400px;
   background-color: white;
   text-decoration: none;
 }
-#image {
-  text-align: right;
-  margin-right: 60px;
-}
 
-.corredor {
+#menulateral{
+border: 2px solid rgb(0, 243, 247);
   
-}
-
-#textMain {
-/*
-  Punto 3: Para que la capa de la imagen y el float NO sigan la dinamica de la seccion anterior hay que romperla
- */
-
-  /* necesitas 1 instruccion*/
-  /*1: */clear: left;
-         margin-right: 300px;
-}
-
-#textMain2 {
-
-  clear: right;
-  margin-right: 300px;
-}
-
-#imageToHide {
- /*
-  Punto 3: La capa de las imagenes debe aparecer a la izquierda de la pantalla
- */
-
-  /* necesitas 1 instruccion*/
-  /*1: */  float: left;
-  text-align: center;
-  margin-bottom: 40px;
-  margin-top: 40px;
-  margin-right: 70px;
-}
-
-#imageToHide2 {
-float: right;
-  text-align: center;
-  margin-bottom: 40px;
-  margin-top: 40px;
-  margin-right: 70px;
-}
-
-#textCookie {
-  text-align: center;
-}
-
-#cookieEU {
- /*
-  Punto 4: La capa esta posicionada casi al centro de la pantalla. Se diferencia del menu y del footer en que NO se queda fija al hacer scroll de la pagina.
- */
-
-  /* necesitas 4 instrucciones. 3 son distancia a los bordes :)*/
-  /*1: */  position:absolute;
-  /*2: */  width: 70%; 
-  /*3: */  left: 15%;
-  /*4: */  top: 35%;
-  border:2px solid red;
-  background-color: white;
-  margin-bottom: 5px;
-  padding-bottom: 5px;
-  box-shadow: 2px 2px 50px black;
-}
-
-#textOverflow {
- /*
-  Punto 5: La capa tiene una barra de scroll vertical para que podamos leer el texto que no cabe en el tamaño. Solo vertical, no horizontal
- */
-
-  /* necesitas 2 instruccion*/
-  /*1: */  overflow-y: scroll;
-  /*2: */  bottom: 100;
+  font-family: 'Indie Flower', cursive;
+  width: 15%;
   
-  height: 250px;
-  text-align: justify;
-  border: 5px solid black;
-  background-color: white;
-  padding: 20px;
-  margin-right: 20px;
-}
-
-#textCentral {
-  margin-top: 10px;
-  padding: 15px;
-  border: 5px dashed black;
-  background-color: white;
-  margin: 10px 250px ;
-  border-radius: 30px 30px 30px 30px ;  
-}
-
-#textOverflow2 {
- /*
-  Punto 5: La capa tiene una barra de scroll vertical para que podamos leer el texto que no cabe en el tamaño. Solo vertical, no horizontal
- */
-
-  /* necesitas 2 instruccion*/
-  /*1: */  overflow-y: scroll;
-  /*2: */  bottom: 100;
-  
-  height: 250px;
-  text-align: justify;
-  border: 5px solid black;
-  background-color: white;
-  padding: 20px;
-  margin-right: 20px;
-}
-
-#textCentral {
-  margin-top: 10px;
-  padding: 15px;
-  border: 5px dashed black;
-  background-color: white;
-  margin: 10px 250px ;
-  border-radius: 30px 30px 30px 30px ;
-}
-
-.button {
-  	background-color: #596461; /* Green */
-    border: none;
-    color: rgb(65, 217, 255);
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-}
-
-.button:hover {
-    box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
 @media all and (max-width: 500px) {
-  #menulateral {
-  float: none;
-  width: 100%;
-  }
-  #menulateral li {
-  display: inline-block;
-  }
-  
-  #textCentral {
-    margin: 0px 0px ;
-  }
-  
-  #imageToHide {
-    /*
-    Punto 7.2: Barra de menu siempre estara 
-    */
-    /* necesitas 1 instruccion*/
-    /*1: */float: none;
 
-    text-align: center;
-    margin-bottom: 40px;
+  #unoImagen{
+    float: none;
   }
 
-  #imageToHide2 {
-    /*
-    Punto 7.2: Barra de menu siempre estara 
-    */
-    /* necesitas 1 instruccion*/
-    /*1: */float: none;
-
-    text-align: center;
-    margin-bottom: 40px;
-  }
-  
-  #textOverflow {
-    margin-right: 0px;
+  #dosImagen{
+    float: none;
   }
 
-  #textOverflow2 {
-    margin-right: 0px;
+  #derecha{
+    float: none;
   }
-  
-  #header {
-    margin-top: 50px;
+
+  #derecha li{
+    display: inline;
   }
- 
 }
 
