@@ -1,0 +1,33 @@
+.card{
+    border: 5px solid red;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
+    
+
+}
+.header{
+    border: 2px solid rgb(14, 14, 192);
+    background-color: rgb(189, 185, 185);
+}
+.bio{
+    border: 2px solid green;
+}
+.stats{
+    border: 2px solid purple;
+   width: 100%;
+    display: flex;
+    
+}
+.stat-item{
+    display: flex;
+    display: inline;
+    border: 2px dashed black;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+}
+.btn-primary{
+    width: 200px;
+}

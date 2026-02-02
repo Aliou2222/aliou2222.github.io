@@ -1,0 +1,272 @@
+*{
+  margin: 0px auto;
+}
+
+body {
+  background: url('../images/hytale01.jpg');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 100px;
+  font-size: 100px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(0, 164, 240);
+  background-color: #FF9900;
+  opacity: 70%;
+}
+
+H2{
+  text-align: center;
+}
+
+#menu{
+  text-align: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 38px;
+  text-align: center;  
+  background-color: rgb(3, 187, 65);
+  border: 1px solid  rgb(0, 164, 240);
+  font-size: 25px;
+}
+
+#menu li{
+display: inline;
+height: 20px;
+}
+
+#menu a{
+  color: white;
+  text-decoration: none;
+  
+}
+
+#menu li a:hover{
+  text-decoration: underline rgb(3, 187, 65);
+  background-color: white;
+  color: black;
+}
+
+#header{
+margin-top: 10px;
+border: 2px solid  rgb(0, 164, 240);
+text-align: center;
+color: white;
+height: 500px;
+padding-top: 10px;
+background: url('../images/hytale.webp');
+background-repeat: no-repeat;
+background-attachment: fixed;
+background-position: center center;
+background-size: cover;
+font-family: 'Indie Flower', cursive;
+
+}
+
+#textCookie {
+  text-align: center;
+}
+
+#cookieEU {
+  position:absolute;
+  width: 70%; 
+  left: 15%;
+  top: 35%;
+  border:2px solid rgb(3, 187, 65);
+  background-color: white;
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+  box-shadow: 2px 2px 50px black;
+}
+
+#main{
+  
+  font-family: 'Indie Flower', cursive;
+  overflow: auto;
+  
+}
+
+#contenido {
+  float: left;
+  width: 83%;
+  border-right: 36px double rgb(0, 243, 247);
+  border-top: 2px solid  rgb(0, 243, 247);
+  text-align: center;
+  
+}
+
+#menulateral{
+  float: right;
+  width: 10%;
+  text-align: center;
+  height: 835px;
+  padding-top: 10px;
+}
+
+#menulateral li{
+  list-style: none;
+  height: 150px;
+  
+}
+
+#primero {
+  
+  text-align: center;
+  height: 400px;
+}
+
+
+
+#imagen1 {
+  float: right;
+  
+  text-align: center;
+  height: 350px;
+  padding-top: 65px;
+  padding-right: 50px;
+}
+
+#texto1 {
+  float: left;
+  overflow-y: scroll;
+  width: 70%;
+  height: 300px;
+  text-align: justify;
+  border-top: 5px solid rgb(0, 243, 247);
+  border-left: 5px solid  rgb(0, 243, 247);
+  background-color: white;
+  padding: 20px;
+  margin-left: 10px;
+  margin-right: 20px;
+  margin-top: 30px;
+}
+
+#segundo {
+  border-top: rgb(0, 164, 240) 5px dashed;
+  text-align: center;
+  height: 400px;
+}
+
+#imagen2{
+  float: left;
+  
+  text-align: center;
+  height: 350px;
+  padding-top: 75px;
+  padding-left: 30px;
+  
+}
+
+#texto2{
+  float: right;
+  overflow-y: scroll;
+  width: 70%;
+  height: 300px;
+  text-align: justify;
+  border-bottom: 5px solid  rgb(0, 243, 247);
+  border-right: 5px solid  rgb(0, 243, 247);
+  background-color: white;
+  padding: 20px;
+  margin-left: 10px;
+  margin-right: 20px;
+  margin-top: 30px;
+  
+  
+}
+
+img{
+  border-radius: 15%;
+  border: dashed 5px #FF9900;
+  margin: 10px;
+}
+
+.imagenes{
+  border: dashed 5px  rgb(0, 164, 240);
+  
+}
+
+img:hover{
+background-color: rgb(0, 164, 240);
+border: dashed 5px black;
+}
+
+.button {
+  	background-color: rgb(3, 187, 65); 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+.button:hover {
+    box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    color: black;
+    background-color: rgb(0, 164, 240);
+}
+
+#footer{
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+  background-color: rgb(3, 187, 65);
+  text-align: center;
+  color: white;
+  border-top: 5px solid rgb(0, 164, 240);
+  clear: both;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#footer a{
+  color: white;
+  text-decoration: none;
+}
+
+#footer a:hover{
+  text-decoration: underline rgb(0, 0, 0);
+  text-decoration: none;
+  color: black;
+  background-color: rgb(0, 164, 240)
+  
+
+  
+
+}
+
+#menulateral {
+  
+  border-top: 2px  solid rgb(0, 243, 247);
+  border-bottom: 2px  solid rgb(0, 243, 247);
+  border-right: 2px  solid rgb(0, 243, 247);
+  font-family: 'Indie Flower', cursive;
+  width: 15%;
+}
+
+@media all and (max-width: 500px) {
+
+  #imagen1{
+    float: none;
+  }
+
+  #imagen2{
+    float: none;
+  }
+
+  #menulateral{
+    float: none;
+    display: inline;
+  }
+
+  #menulateral li{
+    display: inline;
+  }
+}
+

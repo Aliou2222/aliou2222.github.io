@@ -1,0 +1,131 @@
+/*
+    CSS para el examen
+
+    colores:
+
+    fondo: #333333;
+    fondo: cajas: #424242;
+    linea: lightgray;
+    boton: #007BFF;
+    boton seleccionado: #0056b3;
+*/
+
+body {
+    background-color: #333333;
+    margin: auto;
+    width: 90%;
+    
+    
+}
+
+header {
+    text-align: center;
+    
+}
+
+.youtuber, footer, header {
+    border: 1px solid lightgray;
+    /* 5- redondear el borde */
+    /* 6- sombra */
+    margin: 10px auto;
+    padding: 20px;
+    text-align: center;  
+    background-color: #424242;
+    border-radius: 10px;
+    border-color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+     
+}
+footer {
+    padding: 0px;
+    color: white;
+    
+}
+
+.imageHome{
+    border:black 4px solid;
+    border-radius: 3%;
+    /* 7- tamanyo */
+    /* Se utiliza en imágenes y videos 
+    para asegurarse de que siempre llenen 
+    completamente el contenedor, manteniendo
+    su relación de aspecto*/
+    object-fit: cover; 
+    width: 70%;
+    
+}
+
+.youtuber .images {
+    width: 150px;
+  height: 150px;
+     border-radius: 50%;
+      
+    /* Se utiliza en imágenes y videos 
+    para asegurarse de que siempre llenen 
+    completamente el contenedor, manteniendo 
+    su relación de aspecto*/
+    object-fit: cover; 
+}
+
+.youtuber h2 {    
+    color: white;
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.youtuber p {
+    color: white;
+    font-size: 1em;
+}
+
+nav {
+    text-decoration: none;
+}
+
+li {
+    border-left: 4px red solid;
+    /* 12- separa el borde de la izquierda */
+    padding-left: 5px;
+     display: inline;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+}
+
+nav a:hover {
+    color: red;
+    text-decoration: underline;
+
+}
+
+
+.button {
+    padding: 10px 20px;
+    color: white;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    text-align: center;
+    /* animacion en css, para cambiar el color del boton, no visto en clase 
+    pero yo te lo regalo ;) */
+    transition: background-color 0.3s ease;
+}
+.button:hover {
+    color: black;
+     background-color: #fd8700;
+}
+
+@media all and (max-width: 700px) {
+    .youtuber, .footer {
+        border-color: red;
+    }
+    .button {
+        color: yellow;       
+    }
+    .button:hover {
+     color: black;
+    }    
+}
