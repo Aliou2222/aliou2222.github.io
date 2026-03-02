@@ -6,9 +6,11 @@
 // edad=edad+10 
 // edad=++ (lo mismo)
 
+// let edad=11
+
 // if (edad > 17) {
 //     console.log("puede beber")
-//     console.log("puede ir a la discoteca")
+    
 // }
 // else{ 
 //     if (edad > 12) {
@@ -37,6 +39,18 @@
 // }
 
 // let num=1
-for(num=0;num<10;num++){
-    console.log(num)
+// for(num=0;num<10;num++){
+//     console.log(num)
+// }
+
+let edad=11
+let num=1
+
+// for (num=1;num<=10;num++){
+//  console.log(num)
+// }
+
+while(num <= 10){
+ console.log(num)
+ num+=2
 }
