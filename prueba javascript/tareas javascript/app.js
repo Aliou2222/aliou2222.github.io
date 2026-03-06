@@ -11,7 +11,7 @@
 //     return total
 // }
 
-
+// NUMEROS ALEATORIOS
 // let veces=1
 // let numeros=[]
 // let aqui=document.getElementById("solucion")
@@ -33,7 +33,7 @@
 
 
 
-//cesar
+// cesar
 // let letras=['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'ñ', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'Ñ', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
 // let frase="casa"
 // let paso=3

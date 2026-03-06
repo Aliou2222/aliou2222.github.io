@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Neon Driver - Future Strike</title>
+    <style>
+        body {
+            margin: 0;
+            background: #050505;
+            color: #00ffcc;
+            font-family: 'Orbitron', sans-serif; /* Fuente tipo gamer */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            overflow: hidden;
+        }
+        .ui-panel {
+            display: flex;
+            justify-content: space-around;
+            width: 450px;
+            padding: 15px;
+            background: rgba(0, 255, 204, 0.1);
+            border: 2px solid #00ffcc;
+            border-bottom: none;
+            border-radius: 15px 15px 0 0;
+            box-shadow: 0 -5px 15px rgba(0, 255, 204, 0.2);
+        }
+        canvas {
+            border: 3px solid #00ffcc;
+            background: radial-gradient(circle, #101010 0%, #000 100%);
+            box-shadow: 0 0 30px rgba(0, 255, 204, 0.4);
+        }
+        .stat-value { font-size: 22px; text-shadow: 0 0 10px #00ffcc; }
+    </style>
+</head>
+<body>
+
+    <div class="ui-panel">
+        <div>SCORE: <span id="scoreValue" class="stat-value">0</span></div>
+        <div>TIME: <span id="timeValue" class="stat-value">00:00</span></div>
+        <div>SPEED: <span id="levelValue" class="stat-value">1</span></div>
+    </div>
+    <canvas id="gameCanvas"></canvas>
+
+    <script>
+        const canvas = document.getElementById("gameCanvas");
+        const ctx = canvas.getContext("2d");
+        
+        canvas.width = 450;
+        canvas.height = 650;
+
+        let score = 0;
+        let gameActive = true;
+        let startTime = Date.now();
+        let currentLevel = 1;
+        let bichoSpeedBase = 1.2;
+
+        const player = { x: canvas.width/2 - 20, y: canvas.height - 80, w: 40, h: 60, speed: 8 };
+        let fireballs = [];
+        let bichos = [];
+        let stars = []; // Para el fondo animado
+        let keys = {};
+
+        // Generar estrellas de fondo
+        for(let i=0; i<50; i++) {
+            stars.push({ x: Math.random()*canvas.width, y: Math.random()*canvas.height, s: Math.random()*2 });
+        }
+
+        document.addEventListener("keydown", (e) => keys[e.code] = true);
+        document.addEventListener("keyup", (e) => keys[e.code] = false);
+
+        // Disparo
+        document.addEventListener("keydown", (e) => {
+            if (e.code === "Space" && gameActive) {
+                fireballs.push({ x: player.x + player.w/2, y: player.y, r: 6 });
+            }
+        });
+
+        // Crear bichos (👾)
+        setInterval(() => {
+            if (!gameActive) return;
+            bichos.push({
+                x: Math.random() * (canvas.width - 40),
+                y: -50,
+                w: 40,
+                h: 40,
+                speed: bichoSpeedBase + Math.random()
+            });
+        }, 1000);
+
+        // Lógica de dificultad (Cada 60 seg)
+        setInterval(() => {
+            if (gameActive && bichoSpeedBase < 5) {
+                bichoSpeedBase += 0.6;
+                currentLevel++;
+                document.getElementById("levelValue").innerText = currentLevel;
+            }
+        }, 60000);
+
+        function drawPlayer(x, y) {
+            ctx.save();
+            // Cuerpo del coche futurista (Triángulo estilizado hacia arriba)
+            ctx.shadowBlur = 15;
+            ctx.shadowColor = "#00ffcc";
+            ctx.fillStyle = "#00ffcc";
+            
+            ctx.beginPath();
+            ctx.moveTo(x + 20, y); // Punta (arriba)
+            ctx.lineTo(x + 40, y + 60); // Derecha abajo
+            ctx.lineTo(x + 20, y + 45); // Centro interior
+            ctx.lineTo(x, y + 60); // Izquierda abajo
+            ctx.closePath();
+            ctx.fill();
+
+            // Cabina (Cúpula de cristal)
+            ctx.fillStyle = "#fff";
+            ctx.beginPath();
+            ctx.arc(x + 20, y + 30, 6, 0, Math.PI * 2);
+            ctx.fill();
+
+            // Propulsores traseros (fuego neón)
+            ctx.fillStyle = "#ff00ff";
+            ctx.fillRect(x + 5, y + 55, 10, 8);
+            ctx.fillRect(x + 25, y + 55, 10, 8);
+            ctx.restore();
+        }
+
+        function update() {
+            if (!gameActive) return;
+
+            // Tiempo
+            let sec = Math.floor((Date.now() - startTime) / 1000);
+            document.getElementById("timeValue").innerText = 
+                `${Math.floor(sec/60).toString().padStart(2,'0')}:${(sec%60).toString().padStart(2,'0')}`;
+
+            // Movimiento
+            if (keys["ArrowLeft"] && player.x > 0) player.x -= player.speed;
+            if (keys["ArrowRight"] && player.x < canvas.width - player.w) player.x += player.speed;
+
+            // Balas (Bolas de fuego neón)
+            fireballs.forEach((f, i) => {
+                f.y -= 12;
+                if (f.y < 0) fireballs.splice(i, 1);
+            });
+
+            // Bichos
+            bichos.forEach((b, i) => {
+                b.y += b.speed;
+                if (b.y > canvas.height) { bichos.splice(i,1); score = Math.max(0, score-5); }
+                
+                // Colisión con jugador
+                if (b.x < player.x + player.w && b.x + b.w > player.x && b.y < player.y + player.h && b.y + b.h > player.y) {
+                    gameActive = false;
+                    alert("SISTEMA CRÍTICO: COCHE DESTRUIDO\nPuntos: " + score);
+                    location.reload();
+                }
+
+                // Colisión con balas
+                fireballs.forEach((f, fi) => {
+                    if (f.x > b.x && f.x < b.x + b.w && f.y > b.y && f.y < b.y + b.h) {
+                        bichos.splice(i, 1);
+                        fireballs.splice(fi, 1);
+                        score += 10;
+                        document.getElementById("scoreValue").innerText = score;
+                    }
+                });
+            });
+
+            // Fondo (Estrellas)
+            stars.forEach(s => {
+                s.y += 2;
+                if(s.y > canvas.height) s.y = 0;
+            });
+        }
+
+        function draw() {
+            ctx.fillStyle = "#000";
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            // Dibujar estrellas
+            ctx.fillStyle = "#fff";
+            stars.forEach(s => ctx.fillRect(s.x, s.y, s.s, s.s));
+
+            // Dibujar balas (Fuego neón)
+            fireballs.forEach(f => {
+                ctx.shadowBlur = 20;
+                ctx.shadowColor = "#ff3300";
+                ctx.fillStyle = "#ffcc00";
+                ctx.beginPath();
+                ctx.arc(f.x, f.y, f.r, 0, Math.PI*2);
+                ctx.fill();
+            });
+
+            // Dibujar Jugador (Coche futurista)
+            drawPlayer(player.x, player.y);
+
+            // Dibujar Bichos (👾)
+            ctx.shadowBlur = 10;
+            ctx.shadowColor = "#ff00ff";
+            ctx.font = "40px serif";
+            bichos.forEach(b => ctx.fillText("👾", b.x, b.y + 30));
+            ctx.shadowBlur = 0;
+
+            update();
+            requestAnimationFrame(draw);
+        }
+
+        draw();
+    </script>
+</body>
+</html>

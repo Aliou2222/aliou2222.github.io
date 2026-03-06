@@ -43,14 +43,37 @@
 //     console.log(num)
 // }
 
-let edad=11
-let num=1
 
-// for (num=1;num<=10;num++){
-//  console.log(num)
-// }
 
-while(num <= 10){
- console.log(num)
- num+=2
-}
+
+// variable
+let numero=document.getElementById ("numero1")
+let numero2=document.getElementById ("numero2")
+let solucion=document.getElementById("solucion")
+
+let run=document.getElementById("run")
+
+// al pulsar  el boton Run, los dos numeros de la variable se multiplican y se muestran en la consola, y tambien debajo de las variables
+// tambien las puede sumar con parseInt() (en las dos variables que quieras sumar)
+run.addEventListener("click", (e) => {
+    let num=(numero.value)
+    let num2=(numero2.value)
+let cadenaTotal=""
+    for(let i=0;i<num2;i++){
+        cadenaTotal=cadenaTotal+num+ "<br>"
+        
+        console.log("i vale:" +i+": "+num)
+    }
+    solucion.innerHTML=cadenaTotal
+})
+
+
+//  console.log(num2)
+//     console.log(solu) 
+
+
+
+
+
+
+
