@@ -1,0 +1,72 @@
+.container{
+   display: flex;
+    border: 5px solid rgb(0, 0, 0);
+    text-align:center;
+    align-items: center;
+   
+    /* width: 95%; */
+    /* height: 100%; */
+    
+   
+}
+
+.menu{
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    border-bottom: 2px solid rgb(0, 0, 0);
+   top: 0;
+     width: 99%;
+     align-items: center;
+     align-self: center;
+     padding-top: 15px;
+}
+.menu li{
+display: inline;
+height: 20px;
+}
+
+.menu a{
+  color: rgb(235, 0, 0);
+  text-decoration: none;
+  
+}
+
+.menu li a:hover{
+  text-decoration: underline rgb(38, 165, 187);
+  background-color: white;
+  color: black;
+}
+.menu img{
+    width: 25%;
+    padding: 10px;
+}
+.main{
+    display: flex;
+    margin-top: 20%;
+    border: 5px solid rgb(189, 0, 0);
+    width: 80%;
+    align-self: center;
+    
+}
+
+
+
+img{
+     width: 25%;
+}
+
+
+.footer{
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 5px solid rgb(72, 206, 31);
+
+}
+.tarjeta-text{
+     border: 2px solid rgb(0, 129, 189);
+}
