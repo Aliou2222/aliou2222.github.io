@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cliente>
+    <credenciales>
+        <nombre> Juan </nombre>
+        <apellido1>Delgado</apellido1>
+        <apellido2>Martínez</apellido2>
+    </credenciales>
+
+    <pedido>
+        <objeto>bicicleta </objeto>
+        <modelo>A2023</modelo>
+    </pedido>
+
+    <direccion>
+        <calle>Barco 4</calle>
+        <piso>tercer piso</piso>
+        <letra>A</letra>
+    </direccion>
+    <fecha>
+        <dia>19</dia>
+        <mes>5</mes>
+        <anyo>2000 </anyo>
+   </fecha>
+</cliente>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mensaje>
+
+    <remite>
+        <nombre1>Alfredo</nombre1>
+        <apellido1>Reino</apellido1>
+        <email1>alf@ibium.com</email1>
+    </remite>
+
+    <destinatario>
+        <nombre2>Bill</nombre2>
+        <apellido2>Clinton</apellido2>
+       <email2>president@whitehouse.gov</email2>
+    </destinatario>
+
+    <asunto>Hola Bill</asunto>
+
+    <texto>
+        <parrafo>¿Hola qué tal? ...</parrafo>
+        <parrafo>Hace mucho tiempo que no escribes. A ver si llamas y quedmos pronto</parrafo>
+        <parrafo>Un saludo</parrafo>
+    </texto>
+
+</mensaje>
