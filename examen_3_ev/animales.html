@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Animales</h1>
+     <input type="button" id="animal" value="Dame un animal">
+     <div id="solucion"></div>
+
+
+     <script>
+         let url="https://random-words-api.kushcreates.com/api?language=es&category=animals&number=1"
+
+         let animal= document.getElementById("animal");
+         let solucion=document.getElementById('solucion');
+
+          function getAnimal(){
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    function numAleatorio(min, max) {
+                        return Math.floor(Math.random() * (max - min +1)) +min;
+                    
+                    numAleatorio();
+                    const nombre = data[0].url;
+                    resultado.innerHTML = "${nombre}";}
+                })
+        }
+
+             animal.addEventListener("click" ,(e) => {
+            console.log("boton pulsado");
+            getAnimal();
+        });
+
+
+
+
+     </script>
+</body>
+</html>

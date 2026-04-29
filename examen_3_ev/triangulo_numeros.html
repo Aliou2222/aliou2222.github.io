@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Ejercicio</h1>
+
+    <h3>Triangulator</h3>
+
+    líneas: <input type="number" id="numero1">
+    <input type="button" id="DoiT" value="DoiT">
+    <div id="solucion"></div>
+
+    <script>
+    let numero= document.getElementById('numero1');
+    let DoiT=document.getElementById("DoiT");
+    let solucion=document.getElementById('solucion');
+
+    DoiT.addEventListener("click", (e) => {
+    let num=(numero.value)
+    let cadenaTotal=""
+    for(let i=0;i<num;i++){
+        cadenaTotal=cadenaTotal+num+ "<span>"
+        console.log("i vale:" +i+ ": ")
+        
+    }
+     let cadenaTotal1=cadenaTotal+num+ "<span>"
+    solucion.innerHTML=cadenaTotal+ "<br>"  
+})
+
+
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<datos>
+    <discos>
+        <disco>
+            <titulo>Joshua tree</titulo>
+            <grupo>U2</grupo>
+            <formato>CD</formato>
+            <id>D1</id>
+            <fecha_compra>01/01/2026</fecha_compra>
+        </disco>
+
+        <disco>
+            <titulo>La venganza de Goku</titulo>
+            <grupo>Akira Toriyama</grupo>
+            <formato>LP</formato>
+            <id>D2</id>
+            <fecha_compra>01/03/2026</fecha_compra>
+        </disco>
+
+        <disco>
+            <titulo>BSO mortadelo y filemón</titulo>
+            <grupo>Ibañez</grupo>
+            <formato>Cassette</formato>
+            <id>D3</id>
+            <fecha_compra>01/04/2026</fecha_compra>
+        </disco>
+
+        <disco>
+            <titulo>BSO Tarzán de niña a mujer</titulo>
+            <grupo>BTS</grupo>
+            <formato>CD</formato>
+            <id>D4</id>
+            <fecha_compra>01/05/2026</fecha_compra>
+        </disco>
+
+        <disco>
+            <titulo>MP, Me piro</titulo>
+            <grupo>Soy &gt; de edad</grupo>
+            <formato>USB</formato>
+            <id>D5</id>
+            <fecha_compra>01/06/2026</fecha_compra>
+        </disco>
+    </discos>
+
+    <clientes>
+        <cliente>
+            <nombre>María</nombre>
+            <nombre2>Pilar</nombre2>
+            <elemento_prestado1>D1</elemento_prestado1>
+            <elemento_prestado2>D3</elemento_prestado2>
+            <fecha_prestamo1>01/06/2026</fecha_prestamo1>
+            <fecha_prestamo2>02/06/2026</fecha_prestamo2>
+            <dni>111</dni>
+            <telefono1>2323</telefono1>
+            <telefono2>121</telefono2>
+        </cliente>
+
+        <cliente>
+            <nombre>Jose</nombre>
+            <nombre2>María</nombre2>
+            <elemento_prestado1>D2</elemento_prestado1>
+            <elemento_prestado2></elemento_prestado2>
+            <fecha_prestamo1>05/06/2026</fecha_prestamo1>
+            <fecha_prestamo2></fecha_prestamo2>
+            <dni>222</dni>
+            <telefono1>32322</telefono1>
+            <telefono2></telefono2>
+        </cliente>
+
+        <cliente>
+            <nombre>Adriana</nombre>
+            <nombre2></nombre2>
+            <elemento_prestado1>D4</elemento_prestado1>
+            <elemento_prestado2>D5</elemento_prestado2>
+            <fecha_prestamo1>05/06/2026</fecha_prestamo1>
+            <fecha_prestamo2>02/06/2026</fecha_prestamo2>
+            <dni>333</dni>
+            <telefono1>32324</telefono1>
+            <telefono2></telefono2>
+        </cliente>
+    </clientes>
+</datos>
