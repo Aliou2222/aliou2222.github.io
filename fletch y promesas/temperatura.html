@@ -102,8 +102,13 @@
 
           // Mostramos los datos en el HTML
           /*  ACABALO  */
-
-          /*  FIN ACABALO  */        
+          const weatherDiv = document.getElementById('weather');
+          weatherDiv.innerHTML = `
+             <p><strong>Temperatura:</strong> ${temperature}°C</p>
+            <p><strong>Descripción:</strong> ${description}</p>
+            <p><strong>Humedad:</strong> ${humidity}%</p>
+          `;
+            /*  FIN ACABALO  */        
         })
         .catch(error => {
           console.error('Hubo un problema:', error);

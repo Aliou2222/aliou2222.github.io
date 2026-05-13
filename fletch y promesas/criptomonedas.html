@@ -36,8 +36,10 @@
     */
     function creaElemento(cripto,cambio,cantidad) {    
       /*  ACABALO  */        
-      //let liElement ...
-      /*  FIN ACABALO  */
+      let liElement = document.createElement("li");
+     let conversion = cantidad / cambio;
+    liElement.textContent = cantidad + " " + moneda + " = " + conversion.toFixed(8) + " " + cripto + " (1 " + cripto + " = " + cambio + " " + moneda + ")";
+    /* FIN ACABALO  */
       return liElement
     }
     
@@ -70,9 +72,12 @@
         .then(datos => {
             /*  ACABALO  */
             // haz cosas con los datos                
-            let cambio=datos.data.amount
+            let cambio=datos.data.amount;
             console.log("==>"+cambio);
             //usa creaElemento(cripto,cambio,cantidad)
+            const valorCantidad = parseFloat(cantidad.value);
+            let nuevoLi = creaElemento(cripto, cambio, valorCantidad);
+            ulElement.appendChild(nuevoLi);
             /*  FIN ACABALO  */    
 
         })

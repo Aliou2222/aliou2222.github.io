@@ -28,8 +28,7 @@
             let total= Math.round(parseFloat(cantidad.value)*parseFloat(valor)*100)/ 100
             /*  ACABALO  */
             let liElement=document.createElement("li")
-            liElement.textContent=valor+"=>"+clave
-
+            liElement.textContent = `${cantidad.value} ${moneda} son ${total} ${clave} (Cambio: ${valor})`;
             
             //let liElement ....
             /*  FIN ACABALO  */    
@@ -53,7 +52,8 @@
                         console.log(clave, valor);
                         /*  ACABALO  */
                         // resultado.html=clave+"::"+ valor+ <br>
-
+                            let nuevoItem = creaElemento(valor, clave);
+                            resultado.appendChild(nuevoItem);
             
                         // usa creaElemento(valor, clave)
                         /*  FIN ACABALO  */    
@@ -72,3 +72,4 @@
     </script>
 </body>
 </html>
+

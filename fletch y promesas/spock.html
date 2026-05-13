@@ -193,7 +193,8 @@
 
         listaOpciones.addEventListener("change", function() {
             /*  ACABALO  */
-
+            jugadorEscoge = listaOpciones.value; 
+             quienGana(jugadorEscoge, ordenadorEscoge);
             /*  FIN ACABALO  */            
 
         });
@@ -251,7 +252,18 @@
         //Promesa cuando pase el tiempo establecido el ordenador escoge
         function descuenta(){
             /*  ACABALO  */
-
+            const promesaEleccion = new Promise((resolve) => {
+        setTimeout(() => {
+            
+            const aleatorio = Math.floor(Math.random() * opciones.length);
+            ordenadorEscoge = opciones[aleatorio];
+            resolve(ordenadorEscoge);
+        }, tiempoPensar * 1000); 
+  });
+        promesaEleccion.then((eleccion) => {
+        document.getElementById("ordenadorElige").textContent = "El ordenador ya ha elegido :)";
+        quienGana(jugadorEscoge, eleccion); // Ejecutamos la lógica del ganador
+    });
             /*  FIN ACABALO  */            
 
         }
